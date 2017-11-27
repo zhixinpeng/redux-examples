@@ -1,7 +1,7 @@
 {
   "name": "ovlv0zor6",
   "description": null,
-  "version": "0.0.0",
+  "version": "0.0.54",
   "dependencies": {
     "redux-thunk": "2.2.0",
     "redux-logger": "3.0.6",
@@ -9,6 +9,7 @@
     "react-redux": "5.0.6",
     "react-dom": "16.1.1",
     "react": "16.1.1",
+    "prop-types": "15.6.0",
     "isomorphic-fetch": "2.2.1"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import {
   selectSubreddit,
@@ -6,6 +7,7 @@ import {
   invalidateSubreddit
 } from "../actions";
 import Picker from "../components/Picker";
+import Posts from "../components/Posts";
 
 class AsyncApp extends Component {
   constructor(props) {
@@ -22,15 +24,40 @@ class AsyncApp extends Component {
     this.props.dispatch(selectSubreddit(nextSubreddit));
   }
 
+  handleRefreshClick(e) {
+    e.preventDefault();
+
+    const { dispatch, selectedSubreddit } = this.props;
+    dispatch(invalidateSubreddit(selectedSubreddit));
+    dispatch(fetchPostsIfNeeded(selectedSubreddit));
+  }
+
   render() {
-    const { selectSubreddit } = this.props;
+    const { selectedSubreddit, lastUpdated, isFetching, posts } = this.props;
     return (
       <div>
         <Picker
-          value={selectSubreddit}
+          value={selectedSubreddit}
           onChange={this.handleChange}
           options={["reactjs", "frontend"]}
         />
+        <div>
+          {lastUpdated && (
+            <span>
+              Last updated at {new Date(lastUpdated).toLocaleDateString()}.{" "}
+            </span>
+          )}
+          {!isFetching && (
+            <button onClick={this.handleRefreshClick}>Refresh</button>
+          )}
+          {isFetching && posts.length === 0 && <h2>Loading...</h2>}
+          {!isFetching && posts.length === 0 && <h2>Empty.</h2>}
+          {posts.length > 0 && (
+            <div style={{ opacity: isFetching ? 0.5 : 1 }}>
+              <Posts posts={posts} />
+            </div>
+          )}
+        </div>
       </div>
     );
   }
