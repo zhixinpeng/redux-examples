@@ -1,7 +1,5 @@
 # 中间件的洋葱模型
 
-> 原文（保持更新）：[https://github.com/kenberkeley/redux-simple-tutorial/blob/master/middleware-onion-model.md][middleware-onion-model]
-> 
 > 本文是 [Redux 进阶教程][advanced-tutorial] 的拓展阅读
 
 ## &sect; Express 的中间件
@@ -183,5 +181,5 @@ nextState <————————————— |     G     |  |    |    |
 Redux 与 Express 的中间件执行流程一致：层层进入，层层冒出，就像从中间穿过洋葱般的体验
 
 
-[middleware-onion-model]: https://github.com/kenberkeley/redux-simple-tutorial/blob/master/middleware-onion-model.md
-[advanced-tutorial]: https://github.com/kenberkeley/redux-simple-tutorial/blob/master/redux-advanced-tutorial.md
+[middleware-onion-model]: https://github.com/zhixinpeng/redux-examples/blob/master/redux%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/middleware-onion-model.md
+[advanced-tutorial]: https://github.com/zhixinpeng/redux-examples/blob/master/redux%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/redux-advanced-tutorial.md

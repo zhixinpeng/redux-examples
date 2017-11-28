@@ -1,5 +1,4 @@
 # Redux 进阶教程
-> 原文（保持更新）：[https://github.com/kenberkeley/redux-simple-tutorial/blob/master/redux-advanced-tutorial.md][advanced-tutorial]
 
 > ### 写在前面  
 > 相信您已经看过 [Redux 简明教程][simple-tutorial]，本教程是简明教程的实战化版本，伴随源码分析  
@@ -910,16 +909,12 @@ Redux 有五个 API，分别是：
 * `subscribe(listener)`
 * `replaceReducer(nextReducer)`
 
-至此，若您已经理解上述 API 的作用机理，以及中间件与增强器的概念/区别  
-本人将不胜荣幸，不妨点个 [star][this-github] 算是对我的赞赏  
-如您对本教程有任何意见或改进的建议，欢迎 [issue][this-issue]，我会尽快予您答复
-
 最后奉上 React + Redux + React Router 的简易留言板实例：[react-demo][react-demo]
 
 > 拓展阅读：[中间件的洋葱模型][middleware-onion-model]
 
-[simple-tutorial]: https://github.com/kenberkeley/redux-simple-tutorial
-[advanced-tutorial]: https://github.com/kenberkeley/redux-simple-tutorial/blob/master/redux-advanced-tutorial.md
+[simple-tutorial]: https://github.com/zhixinpeng/redux-examples/tree/master/redux%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90
+[advanced-tutorial]: https://github.com/zhixinpeng/redux-examples/blob/master/redux%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/redux-advanced-tutorial.md
 [babel-repl]: http://babeljs.io/repl/
 [redux-src]: https://github.com/reactjs/redux/tree/master/src
 [redux-thunk]: https://github.com/gaearon/redux-thunk
@@ -935,4 +930,4 @@ Redux 有五个 API，分别是：
 [this-issue]: https://github.com/kenberkeley/redux-simple-tutorial/issues
 [this-github]: https://github.com/kenberkeley/redux-simple-tutorial
 [react-demo]: https://github.com/kenberkeley/react-demo
-[middleware-onion-model]: https://github.com/kenberkeley/redux-simple-tutorial/blob/master/middleware-onion-model.md
+[middleware-onion-model]: https://github.com/zhixinpeng/redux-examples/blob/master/redux%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/middleware-onion-model.md
